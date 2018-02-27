@@ -24,6 +24,41 @@
 		em {color:#CCC; font-style: normal}
 		a {text-decoration: none; border-bottom: 1px solid #CCC; color:#333; padding-bottom: 3px;}
 		a:hover {color: #0000FF; border-bottom: 2px solid currentColor}
+
+		.calendar {
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+			padding: 0;
+		}
+
+		.calendar > li { margin-top: 20px;}
+
+			@media all and (min-width : 768px) {
+				.calendar {
+					flex-direction: row;
+					flex-wrap: wrap;
+				}
+
+				.calendar > li {
+					width: 50%;
+					padding-bottom: 20px;
+				}
+			}
+
+			@media all and (min-width : 1200px) {
+
+				.calendar > li {
+					margin-top: 0;
+					padding-bottom: 40px;
+				}
+			}
+
+		.calendar ul {
+			padding: 0;
+			list-style-position: inside;
+		}
+
 	</style>
 
 </head>
@@ -32,17 +67,95 @@
 		<h1><strong>Chantier en Bretagne</strong></h1>
 		<p><em>Maison et site internet en construction</em></p>
 
-		<h2>— Calendrier</h2>
+		<h2>Calendrier 2018</h2>
+		<ul class="calendar">
+			<li>
+				<h3>Février</h3>
+				<ul>
+					<li>Raccordement du mobilhome</li>
+					<li>Aménagement du chantier</li>
+					<li>Cloturage</li>
+					<li>Dépose des toitures</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Mars</h3>
+				<ul>
+					<li>Terrassement, démolition</li>
+					<li>Maçonnerie</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Avril</h3>
+				<ul>
+					<li>Drainage</li>
+					<li>Maçonnerie</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Mai</h3>
+				<ul>
+					<li>Maçonnerie</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Juin</h3>
+				<ul>
+					<li>Ossatures des murs (GREB)</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Juillet</h3>
+				<ul>
+					<li>Charpente</li>
+					<li>Récolte de la paille</li>
+					<li>Toiture</li>
+					<li>Isolation du toit en paille</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Aout</h3>
+				<ul>
+					<li>Toiture</li>
+					<li>Isolation des murs en paille</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Septembre</h3>
+				<ul>
+					<li>Isolation des murs en paille</li>
+					<li>Dalle</li>
+					<li>Pose des fenêtres</li>
+				</ul>
+			</li>
+			<li>
+				<h3>Octobre</h3>
+				<p>…</p>
+			</li>
+			<li>
+				<h3>Novembre</h3>
+				<p>…</p>
+			</li>
+			<li>
+				<h3>Décembre</h3>
+				<p>…</p>
+			</li>
+		</ul>
 
+		<h2>Quotidien</h2>
+		<div>
+			<p>
+				<a href="http://www.instagram.com/chantier.bzh">Suivre le chantier en photo</a>
+			</p>
+		</div>
 
-		<h2>— Quotidien</h2>
-		<p>
-			<a href="http://www.instagram.com/chantier.bzh">Suivre le chantier en photo</a>
-		</p>
-
-		<h2>— À propos</h2>
-		<p> Rénovation d'une longère bretonne. Autoconstruction en bois et paille (GREB), bardage en bois brûlé et toit prairie. </p>
-		<p><a href="mailto:violenn.simon@gmail.com,denis.fongue@gmail.com">Nous contacter</a></p>
+		<h2>À propos</h2>
+		<div>
+			<p> Rénovation d'une longère bretonne. Autoconstruction en bois et paille (GREB), bardage en bois brûlé et toit prairie. </p>
+			<p>
+				<a href="mailto:violenn.simon@gmail.com,denis.fongue@gmail.com">Nous contacter</a>
+			</p>
+		</div>
 	</body>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114120005-1"></script>
