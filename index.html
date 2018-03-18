@@ -25,6 +25,7 @@
 
 				body {
 					max-width: 1600px;
+					margin: 80px 80px 400px;
 				}
 
 				h2 {
@@ -33,11 +34,6 @@
 
 				h2:before {	content : "";}
 
-				h2, h2 + * {
-					float: left;
-					width: 50%;
-					margin-top: 40px;
-				}
 
 			}
 
@@ -47,8 +43,40 @@
 		a {text-decoration: none; border-bottom: 1px solid #CCC; color:#333; padding-bottom: 3px;}
 		a:hover {color: #0000FF; border-bottom: 2px solid currentColor}
 
+		.intro {
+			overflow: hidden;
+		}
+
+		.cover {
+			width: 100%;
+			height: auto;
+			margin-top: 40px;
+			display: block;
+		}
+
+		.cover + h2 {
+			margin-top: 40px;
+		}
+
+		@media all and (min-width : 1280px) {
+
+			h2, h2 + *, .intro-desc, .cover {
+				float: left;
+				width: calc(100% / 3);
+				margin-top: 80px;
+			}
+			h2 + *, .cover {
+				width: calc(100% / 3 * 2);
+			}
+
+			.intro-desc, .cover {
+				margin-top: 0;
+			}
+		}
+
 		.content {
 			overflow: hidden;
+			clear: both;
 		}
 
 		.calendar {
@@ -90,8 +118,13 @@
 </head>
 
 <body>
-		<h1><strong>Chantier en Bretagne</strong></h1>
-		<p><em>Maison et site internet en construction</em></p>
+		<div class="intro">
+			<div class="intro-desc">
+				<h1><strong>Chantier en Bretagne</strong></h1>
+				<p><em>Maison et site internet en construction</em></p>
+			</div>
+			<img class="cover" src="_/i/cover.jpg" alt="outils" />
+		</div>
 
 		<main class="content">
 		<h2>Calendrier 2018</h2>
