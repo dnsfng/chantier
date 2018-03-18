@@ -36,7 +36,7 @@
 
 
 			}
-		h3 {text-transform: uppercase;}
+		h3 {text-transform: uppercase; font-weight: bold; font-size: 16px;}
 
 		p {margin : 0 0 20px 0; max-width: 560px;}
 		strong {font-weight: normal;}
@@ -73,6 +73,10 @@
 			.intro-desc, .cover {
 				margin-top: 0;
 			}
+
+			.cover{
+				margin-bottom: 40px;
+			}
 		}
 
 		.content {
@@ -89,30 +93,67 @@
 
 		.calendar > li { margin-top: 20px;}
 
-			@media all and (min-width : 768px) {
-				.calendar {
-					flex-direction: row;
-					flex-wrap: wrap;
-				}
-
-				.calendar > li {
-					width: 50%;
-					padding-bottom: 20px;
-				}
-			}
-
-			@media all and (min-width : 1280px) {
-
-				.calendar > li {
-					margin-top: 0;
-					padding-bottom: 40px;
-				}
-			}
-
 		.calendar ul {
 			padding: 0;
+			margin-bottom: 0;
 			list-style-position: inside;
 		}
+
+		.itinerary {
+			margin-top: 40px;
+		}
+
+		.itinerary dl{
+			margin: 0;
+			padding-bottom: 20px;
+			clear: both;
+			overflow: hidden;
+		}
+
+		.itinerary dt {
+			float: left;
+			clear: right;
+		}
+
+		.itinerary dd {
+			float: right;
+		}
+
+		@media all and (min-width : 420px) {
+			.itinerary dl{
+				max-width: calc(100% / 3 * 2);
+			}
+		}
+
+		@media all and (min-width : 768px) {
+			.calendar {
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+
+			.calendar > li {
+				width: 50%;
+				padding-bottom: 20px;
+			}
+
+			.itinerary dl{
+				max-width: 50%;
+			}
+		}
+
+		@media all and (min-width : 1280px) {
+
+			.calendar > li, .itinerary dl {
+				margin-top: 0;
+				padding-bottom: 40px;
+			}
+
+			.itinerary {
+				margin-top: 80px;
+			}
+
+		}
+
 
 	</style>
 
@@ -220,6 +261,38 @@
 				</ul>
 			</li>
 		</ul>
+
+		<h2>Venir</h2>
+		<div class="itinerary">
+			  <h3>Train</h3>
+			  <dl>
+					<dt>Paris > Rosporden</dt>
+					<dd>3h30</dd>
+				</dl>
+
+			  <h3>Voiture</h3>
+			  <dl>
+					<dt>Lorient</dt>
+					<dd>0h40</dd>
+					<dt>Quimper</dt>
+					<dd>0h35</dd>
+					<dt>Rennes</dt>
+					<dd>2h10</dd>
+					<dt>Nantes</dt>
+					<dd>2h30</dd>
+					<dt>Paris</dt>
+					<dd>5h20</dd>
+				</dl>
+
+				<h3>Aéroports</h3>
+				<dl>
+					<dt>Lorient</dt>
+					<dd>0h35</dd>
+					<dt>Quimper</dt>
+					<dd>0h45</dd>
+				</dl>
+
+		</div>
 
 		<h2>Quotidien</h2>
 		<div>
